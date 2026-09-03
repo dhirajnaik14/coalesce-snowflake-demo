@@ -1,0 +1,178 @@
+fileVersion: 1
+id: 5e56bb38-2286-487a-9cb4-7a2bd7c55568
+name: RPT_SALES
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 529dcb04-ef3c-46f5-b602-b2da2739668e
+          stepCounter: 5e56bb38-2286-487a-9cb4-7a2bd7c55568
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ORDER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 190fddac-e6e8-4a76-a20e-a1150c80c069
+                stepCounter: c2cd3f12-dc03-4a75-afb2-1b374aaf5042
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9ba5c064-8a82-4967-a241-2c2f33027e35
+          stepCounter: 5e56bb38-2286-487a-9cb4-7a2bd7c55568
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CUSTOMER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c858fc66-a9ca-4661-84a6-36edf63ab4c6
+                stepCounter: c2cd3f12-dc03-4a75-afb2-1b374aaf5042
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 851df8ff-bac5-419d-beb6-0051cf3a2620
+          stepCounter: 5e56bb38-2286-487a-9cb4-7a2bd7c55568
+        config: {}
+        dataType: DATE
+        description: ""
+        name: ORDER_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f1787b78-3681-4378-8c41-2f020232fe19
+                stepCounter: c2cd3f12-dc03-4a75-afb2-1b374aaf5042
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2d916e00-2003-4956-a3cc-0204c14122a2
+          stepCounter: 5e56bb38-2286-487a-9cb4-7a2bd7c55568
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: PRODUCT_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b5aedbdc-6d50-469e-b5d3-2000c0c98529
+                stepCounter: c2cd3f12-dc03-4a75-afb2-1b374aaf5042
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 72fb6cf8-f514-467c-9765-6d666ac1c4f4
+          stepCounter: 5e56bb38-2286-487a-9cb4-7a2bd7c55568
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: QUANTITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 949b57ae-1787-4858-9344-a3461e7c16ab
+                stepCounter: c2cd3f12-dc03-4a75-afb2-1b374aaf5042
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8920b887-c869-49b5-98ff-23584e580b0c
+          stepCounter: 5e56bb38-2286-487a-9cb4-7a2bd7c55568
+        config: {}
+        dataType: NUMBER(10,2)
+        description: ""
+        name: UNIT_PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1fb907a1-3fc9-4fa6-8c5e-1cb0bbadceba
+                stepCounter: c2cd3f12-dc03-4a75-afb2-1b374aaf5042
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0c7c1122-b6fe-4f75-99bc-827860e8bc54
+          stepCounter: 5e56bb38-2286-487a-9cb4-7a2bd7c55568
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d4892887-71da-480c-9ab2-dd9f03d951ba
+                stepCounter: c2cd3f12-dc03-4a75-afb2-1b374aaf5042
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3160999a-a633-4802-b49d-0c5ae6c73745
+          stepCounter: 5e56bb38-2286-487a-9cb4-7a2bd7c55568
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: SYSTEM_UPDATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a0a4de42-5bc4-4b75-92ab-787dfae20fd9
+                stepCounter: c2cd3f12-dc03-4a75-afb2-1b374aaf5042
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 24f5a79e-e831-4a79-9d15-7e07c625815b
+          stepCounter: 5e56bb38-2286-487a-9cb4-7a2bd7c55568
+        config: {}
+        dataType: NUMBER(10,2)
+        description: ""
+        name: ORDER_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 015b7889-e2fe-425a-9d66-ea28d6e69739
+                stepCounter: c2cd3f12-dc03-4a75-afb2-1b374aaf5042
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cf77df3b-a81a-4b0a-802e-e6d8d7ccbc73
+          stepCounter: 5e56bb38-2286-487a-9cb4-7a2bd7c55568
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: CUSTOMER_FULL_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d977a81e-79a7-4278-aabc-255074ba4c46
+                stepCounter: c2cd3f12-dc03-4a75-afb2-1b374aaf5042
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          FCT_ORDERS: c2cd3f12-dc03-4a75-afb2-1b374aaf5042
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: FCT_ORDERS
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'FCT_ORDERS') }} "FCT_ORDERS"
+        name: RPT_SALES
+        noLinkRefs: []
+  name: RPT_SALES
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node
