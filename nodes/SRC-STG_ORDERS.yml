@@ -1,0 +1,124 @@
+fileVersion: 1
+id: bba1b0a6-359f-4ab1-acdd-c30d5c84cdda
+name: STG_ORDERS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 61216ae6-64cf-4d31-9b3b-80f46a68252a
+          stepCounter: bba1b0a6-359f-4ab1-acdd-c30d5c84cdda
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ORDER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a1869121-1694-4be0-9652-44a138afd077
+                stepCounter: 60431fa1-2272-4ee8-8f3e-69885137f8db
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e0126b5a-7c52-4fba-b89b-223452a1e963
+          stepCounter: bba1b0a6-359f-4ab1-acdd-c30d5c84cdda
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CUSTOMER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a281f5a0-b675-486a-9cf8-7b6e72e3fe0c
+                stepCounter: 60431fa1-2272-4ee8-8f3e-69885137f8db
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4527c9c7-76c5-4c2d-94cf-6246e0114bea
+          stepCounter: bba1b0a6-359f-4ab1-acdd-c30d5c84cdda
+        config: {}
+        dataType: DATE
+        description: ""
+        name: ORDER_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6166420d-ef18-445c-a095-494c2495b8c4
+                stepCounter: 60431fa1-2272-4ee8-8f3e-69885137f8db
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5782b7e4-7104-4785-9e48-d289c10d3bbf
+          stepCounter: bba1b0a6-359f-4ab1-acdd-c30d5c84cdda
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: PRODUCT_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 819d6f7b-6f57-436b-b453-55df9660c903
+                stepCounter: 60431fa1-2272-4ee8-8f3e-69885137f8db
+            transform: TRIM("ORDERS"."PRODUCT_NAME")
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8ecf0074-eac9-45e9-9e79-59e5efe14ae8
+          stepCounter: bba1b0a6-359f-4ab1-acdd-c30d5c84cdda
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: QUANTITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cd3c9245-328d-4707-9275-08a21989205f
+                stepCounter: 60431fa1-2272-4ee8-8f3e-69885137f8db
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: eb5a368e-c7e9-4bd9-ab03-11d12abb6895
+          stepCounter: bba1b0a6-359f-4ab1-acdd-c30d5c84cdda
+        config: {}
+        dataType: NUMBER(10,2)
+        description: ""
+        name: UNIT_PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bad1e6ca-2abe-42d1-b456-fc124981f67d
+                stepCounter: 60431fa1-2272-4ee8-8f3e-69885137f8db
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          ORDERS: 60431fa1-2272-4ee8-8f3e-69885137f8db
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: ORDERS
+        join:
+          joinCondition: FROM {{ ref('SRC', 'ORDERS') }} "ORDERS"
+        name: STG_ORDERS
+        noLinkRefs: []
+  name: STG_ORDERS
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

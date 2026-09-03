@@ -1,0 +1,138 @@
+fileVersion: 1
+id: dc783f86-6874-4ac6-a59c-a77c20e710e5
+name: STG_CUSTOMERS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7b150cb0-9dfa-42b3-9d5a-6cdcb2c883f3
+          stepCounter: dc783f86-6874-4ac6-a59c-a77c20e710e5
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CUSTOMER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 91778066-3f6e-4e42-9733-9e54c1e53486
+                stepCounter: 8c7412f3-a246-4345-8e7a-dfe1da4a1e9f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7cf92633-7670-48f6-92dc-24e0641d4e72
+          stepCounter: dc783f86-6874-4ac6-a59c-a77c20e710e5
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: FIRST_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e58506b2-52bc-4e1a-916c-283bdad5946c
+                stepCounter: 8c7412f3-a246-4345-8e7a-dfe1da4a1e9f
+            transform: TRIM("CUSTOMERS"."FIRST_NAME")
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 20ee7a0b-0c06-461c-9e7c-ffba40ab7fd2
+          stepCounter: dc783f86-6874-4ac6-a59c-a77c20e710e5
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: LAST_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0975a38a-621c-4346-aed5-18fe5dd235b7
+                stepCounter: 8c7412f3-a246-4345-8e7a-dfe1da4a1e9f
+            transform: TRIM("CUSTOMERS"."LAST_NAME")
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1482f02e-bc6e-493f-9639-cbd5c6c82d9f
+          stepCounter: dc783f86-6874-4ac6-a59c-a77c20e710e5
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: EMAIL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5cad6c12-ace8-4f2a-b504-bdf6e80f84e5
+                stepCounter: 8c7412f3-a246-4345-8e7a-dfe1da4a1e9f
+            transform: LOWER(TRIM("CUSTOMERS"."EMAIL"))
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6074199f-b322-48ce-8d4e-9bb193d0e89c
+          stepCounter: dc783f86-6874-4ac6-a59c-a77c20e710e5
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a783235b-6133-4916-847f-03095a422a4b
+                stepCounter: 8c7412f3-a246-4345-8e7a-dfe1da4a1e9f
+            transform: COALESCE(TRIM("CUSTOMERS"."CITY"), 'Unknown')
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 83a97c6e-3faf-440c-b436-eb6bc7ecee8c
+          stepCounter: dc783f86-6874-4ac6-a59c-a77c20e710e5
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: COUNTRY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 93927563-6fcb-4baa-8703-3f3f13b07f22
+                stepCounter: 8c7412f3-a246-4345-8e7a-dfe1da4a1e9f
+            transform: COALESCE(TRIM("CUSTOMERS"."COUNTRY"), 'Unknown')
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: aa83c336-bf05-4704-bdfd-d3ed80db60a6
+          stepCounter: dc783f86-6874-4ac6-a59c-a77c20e710e5
+        config: {}
+        dataType: DATE
+        description: ""
+        name: SIGNUP_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bea970fb-446a-4bc9-a5ec-558f708c3adc
+                stepCounter: 8c7412f3-a246-4345-8e7a-dfe1da4a1e9f
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          CUSTOMERS: 8c7412f3-a246-4345-8e7a-dfe1da4a1e9f
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: CUSTOMERS
+        join:
+          joinCondition: FROM {{ ref('SRC', 'CUSTOMERS') }} "CUSTOMERS"
+        name: STG_CUSTOMERS
+        noLinkRefs: []
+  name: STG_CUSTOMERS
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
