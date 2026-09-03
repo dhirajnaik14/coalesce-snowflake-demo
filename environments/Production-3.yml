@@ -1,5 +1,11 @@
 fileVersion: 1
 id: "3"
-mappingDefinitions: {}
+mappingDefinitions:
+  SRC:
+    database: PC_COALESCE_DB
+    schema: PUBLIC
+  TARGET:
+    database: PC_COALESCE_DB
+    schema: TRANSFORM
 name: Production
 type: Environment
